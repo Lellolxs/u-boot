@@ -32,8 +32,8 @@ DECLARE_GLOBAL_DATA_PTR;
 #define PIN_USB_GREEN_LED	15
 #define PIN_USB_POWER		21
 
-#define NSA310S_OE_LOW		(~(0))
 #define NSA310S_VAL_LOW		(SYS_GREEN_LED | USB_POWER)
+#define NSA310S_OE_LOW		(~(NSA310S_VAL_LOW))
 
 /*
  * high GPIO's
@@ -41,8 +41,8 @@ DECLARE_GLOBAL_DATA_PTR;
 #define HDD2_GREEN_LED		BIT(2)
 #define HDD2_POWER		BIT(1)
 
-#define NSA310S_OE_HIGH		(~(0))
 #define NSA310S_VAL_HIGH	(HDD2_POWER)
+#define NSA310S_OE_HIGH		(~(NSA310S_VAL_HIGH))
 
 int board_early_init_f(void)
 {
